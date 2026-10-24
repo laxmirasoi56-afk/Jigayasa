@@ -1,4 +1,15 @@
-!pip install --upgrade buildozer
-!sudo apt-get update
-!sudo apt-get install -y build-essential ccache git libncurses5:i386 libstdc++6:i386 libgtk2.0-0 libpangox-1.0-0 libpangoxft-1.0-0 libidn11 python3-dev zlib1g-dev zlib1g:i386 libffi-dev libltdl-dev
-!buildozer -v android debug
+[app]
+
+title = Jigayasa Jarvis MK-II
+package.name = jigayasajarvis
+package.domain = org.jigayasa
+source.dir = .
+source.include_exts = py,png,jpg,kv
+version = 2.0
+requirements = python3==3.10.12,hostpython3==3.10.12,kivy,pyjnius
+orientation = portrait
+fullscreen = 1
+android.permissions = CAMERA, FLASHLIGHT, INTERNET, ACCESS_WIFI_STATE, CHANGE_WIFI_STATE
+android.api = 33
+android.minapi = 21
+android.archs = arm64-v8a
